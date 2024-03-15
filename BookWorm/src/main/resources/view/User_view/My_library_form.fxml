@@ -11,7 +11,7 @@
 
 <AnchorPane fx:id="pane2" prefHeight="792.0" prefWidth="1245.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.MyLibraryFormController">
    <children>
-      <ImageView fitHeight="792.0" fitWidth="1245.0" opacity="0.42" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="792.0" fitWidth="1245.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/userBorrowBook.jpg" />
          </image>

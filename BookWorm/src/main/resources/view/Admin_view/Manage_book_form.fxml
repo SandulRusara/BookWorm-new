@@ -6,12 +6,18 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="792.0" prefWidth="1239.0" style="-fx-background-color: #908b8b;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ManageBookFormController">
+<AnchorPane prefHeight="792.0" prefWidth="1239.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ManageBookFormController">
    <children>
+      <ImageView fitHeight="792.0" fitWidth="1239.0" opacity="0.35">
+         <image>
+            <Image url="@../../images/adminlogin.jpg" />
+         </image>
+      </ImageView>
       <TextField fx:id="txtTitle" layoutX="191.0" layoutY="131.0" prefHeight="46.0" prefWidth="316.0" promptText="Book Title" style="-fx-background-radius: 20;">
          <font>
             <Font size="15.0" />

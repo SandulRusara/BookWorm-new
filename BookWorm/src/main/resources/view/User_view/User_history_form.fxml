@@ -6,18 +6,16 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="792.0" prefWidth="1245.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserHistoryFormController">
+<AnchorPane prefHeight="792.0" prefWidth="1245.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserHistoryFormController">
    <children>
-      <ImageView fitHeight="792.0" fitWidth="1245.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="792.0" fitWidth="1245.0" opacity="0.44" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/userBorrowBook.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="96.0" layoutX="482.0" layoutY="-16.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="251.0" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="468.0" layoutY="4.0" prefHeight="68.0" prefWidth="273.0" text="My History">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="475.0" layoutY="83.0" prefHeight="68.0" prefWidth="273.0" text="My History">
          <font>
             <Font name="Abyssinica SIL" size="44.0" />
          </font>

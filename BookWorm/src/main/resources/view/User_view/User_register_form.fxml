@@ -60,7 +60,7 @@
                   <Font name="Chilanka Regular" size="15.0" />
                </font>
             </Label>
-            <JFXButton fx:id="btnCreateAccount" buttonType="RAISED" layoutX="178.0" layoutY="637.0" onAction="#btnCreateAccountOnAction" prefHeight="51.0" prefWidth="298.0" style="-fx-background-color: #52D3D8; -fx-background-radius: 20;" styleClass="button-color2" text="Create Account" textFill="WHITE">
+            <JFXButton fx:id="btnCreateAccount" buttonType="RAISED" layoutX="247.0" layoutY="639.0" onAction="#btnCreateAccountOnAction" prefHeight="51.0" prefWidth="173.0" style="-fx-background-color: #7f00ff; -fx-background-radius: 10;" styleClass="button-color2" text="Create Account" textFill="WHITE">
                <font>
                   <Font size="19.0" />
                </font>

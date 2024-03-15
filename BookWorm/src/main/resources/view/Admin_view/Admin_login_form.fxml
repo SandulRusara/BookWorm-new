@@ -47,7 +47,7 @@
                </font>
             </PasswordField>
             <CheckBox fx:id="checkBoxPw" layoutX="101.0" layoutY="484.0" mnemonicParsing="false" onAction="#checkBoxPwOnAction" text="Show Password" textFill="#908b8b" />
-            <JFXButton fx:id="btnLogIn" layoutX="167.0" layoutY="588.0" onAction="#btnLogInOnAction" prefHeight="63.0" prefWidth="241.0" style="-fx-background-color: #64CCC5; -fx-background-radius: 20;" text="Login" textFill="WHITE">
+            <JFXButton fx:id="btnLogIn" layoutX="203.0" layoutY="585.0" onAction="#btnLogInOnAction" prefHeight="56.0" prefWidth="175.0" style="-fx-background-color: #7f00ff; -fx-background-radius: 10;" text="Login" textFill="WHITE">
                <font>
                   <Font size="26.0" />
                </font>
