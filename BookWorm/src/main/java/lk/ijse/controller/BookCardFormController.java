@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import lk.ijse.bo.BoFactory;
 import lk.ijse.bo.Custom.BookBo;
 import lk.ijse.bo.Custom.TransactionBo;
 import lk.ijse.bo.Custom.impl.BookBoImpl;
@@ -30,14 +31,13 @@ public class BookCardFormController {
     private Label lblBorrowDate;
 
     @FXML
-    private Label lblDueDate;
-
-    @FXML
     private Label lblCategory;
 
+    @FXML
+    private Label lblDueDate;
     private MyLibraryFormController libraryFormController;
-    private BookBo bookBo = new BookBoImpl();
-    private TransactionBo transactionBo = new TransactionBoImpl();
+    private BookBo bookBo = (BookBo) BoFactory.getBoFactory().getBoType(BoFactory.BoTypes.BOOK);
+    private TransactionBo transactionBo = (TransactionBo) BoFactory.getBoFactory().getBoType(BoFactory.BoTypes.TRANSACTION);
     private TransactionDto transactionDto ;
 
     @FXML
@@ -61,12 +61,9 @@ public class BookCardFormController {
             alert.getButtonTypes().setAll(yesButton, noButton);
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == yesButton) {
-              /*  boolean isUpdated =   transactionBo.update(dto);
-                if (isUpdated){
-                    bookBo.updateBook(dto1);
-                    new Alert(Alert.AlertType.CONFIRMATION,"return successful.").show();
-                }*/
+
                 updateBookAndTransaction(dto1,dto);
+                libraryFormController.initialize();
             }
 
         } catch (SQLException e) {
@@ -122,7 +119,6 @@ public class BookCardFormController {
     }
 
     public MyLibraryFormController getLibraryFormController() {
-        return libraryFormController;
-    }
+        return libraryFormController;}
 }
 

@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import lk.ijse.bo.BoFactory;
 import lk.ijse.bo.Custom.BookBo;
 import lk.ijse.bo.Custom.TransactionBo;
 import lk.ijse.bo.Custom.UserBo;
@@ -66,9 +67,8 @@ public class BorrowBookFormController {
 
     @FXML
     private TextField txtSEarch;
-    private BookBo bookBo = new BookBoImpl();
-    private UserBo userBo = new UserBoImpl();
-    private TransactionBo transactionBo = new TransactionBoImpl();
+    private BookBo bookBo = (BookBo) BoFactory.getBoFactory().getBoType(BoFactory.BoTypes.BOOK);
+    private TransactionBo transactionBo = (TransactionBo) BoFactory.getBoFactory().getBoType(BoFactory.BoTypes.TRANSACTION);
 
     private  ObservableList<BookTm> observableList = FXCollections.observableArrayList();
     public void initialize() {
@@ -138,6 +138,7 @@ public class BorrowBookFormController {
             if (result.isPresent() && result.get() == yesButton) {
 
                 borrowBook();
+                clearFields();
             }
         }else{
             new Alert(Alert.AlertType.INFORMATION,"please select a book").show();
@@ -148,21 +149,26 @@ public class BorrowBookFormController {
     private void borrowBook() {
 
         String bookTitle = txtBookTitle.getText() ;
-        if (bookTitle != null) {
-            TransactionDto dto = new TransactionDto(userId, bookTitle, LocalDate.now(), lblDueDate.getText(), false);
-            // Assuming no return type for saveTransactiondata
-            BookDto bookDto = null;
-            try {
+        BookDto  bookDto = null;
+        try {
+            bookDto = bookBo.getBook(bookTitle);
+            if (bookDto.getAvailability().equals("Available")){
+                TransactionDto dto = new TransactionDto(userId, bookTitle, LocalDate.now(), lblDueDate.getText(), false);
                 transactionBo.saveTransactiondata(userId, bookTitle, dto);
-                bookDto = bookBo.getBook(bookTitle);
+
                 bookDto.setAvailability("Unavailable");
                 bookBo.updateBook(bookDto);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+                new Alert(Alert.AlertType.CONFIRMATION, "Your book Borrow process is successful").show();
+
             }
-            // Assuming no return type for updateBook
-            new Alert(Alert.AlertType.CONFIRMATION, "Your book Borrow process is successful").show();
+            else {
+                new Alert(Alert.AlertType.WARNING, "This Book is Currently Not Available. Try out another book").show();
+
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
+
 
     }
 
@@ -220,14 +226,11 @@ public class BorrowBookFormController {
     void textFieldFocus() {
         txtSEarch.focusedProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal) {
-                // TextField gained focus, hide the image
                 img1.setVisible(false);
             } else {
-                // TextField lost focus, show the image
                 img1.setVisible(true);
             }
         });
-
     }
     private void clearFields() {
         txtBookTitle.clear();
@@ -235,5 +238,5 @@ public class BorrowBookFormController {
         txtGener.clear();
         combPeriod.getSelectionModel().clearSelection();
         lblDueDate.setText("");
-    }
+}
 }

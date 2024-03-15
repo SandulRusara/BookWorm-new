@@ -2,6 +2,10 @@ package lk.ijse.tm;
 
 import java.time.LocalDate;
 
+//package lk.ijse.tm;
+
+import java.time.LocalDate;
+
 public class TransactionTm {
     private String transactionId;
     private String bookId;
@@ -44,6 +48,14 @@ public class TransactionTm {
         this.borrow = borrow;
         this.dueDate = dueDate;
     }
+
+    public TransactionTm(String branchName, String bookName, LocalDate dueDate, String userName) {
+        this.bookName =bookName;
+        this .dueDate = dueDate;
+        this.branchName = branchName;
+        this.userName = userName;
+    }
+
 
     public String getTransactionId() {
         return transactionId;

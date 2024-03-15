@@ -93,7 +93,7 @@ public class AdminDashboardFormController {
             System.out.println(dtoList);
             for (TransactionDto dto : dtoList){
 
-                observableList.add(new TransactionTm(dto.getBranchName(), dto.getBookId(), dto.getDueDate(), Long.parseLong(dto.getUserName())));
+                observableList.add(new TransactionTm(dto.getBranchName(), dto.getBookId(), dto.getDueDate(),dto.getUserName())); //Long.parseLong
             }
             tblCheckOuts.getItems().clear();
             tblCheckOuts.setItems(observableList);
