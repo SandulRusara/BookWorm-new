@@ -1,0 +1,74 @@
+/*.anchor-pane-with-background {*/
+/*    -fx-background-image: url("../images/loginBackground.png"); !* Reference to the image in the resources directory *!*/
+/*    -fx-background-size: cover;*/
+/*    -fx-background-repeat: no-repeat;*/
+/*    -fx-background-position: center center;*/
+/*}*/
+
+/*.anchor-pane-with-background2{*/
+/*    -fx-background-color: rgba(229, 200, 162,0.60);*/
+/*    -fx-border-color: rgba(229, 146, 24, 0.58);*/
+/*    -fx-border-width: 3px;*/
+/*    -fx-cursor: hand;*/
+
+
+/*}*/
+/*.anchor-pane-with-background3{*/
+/*    -fx-background-color: rgba(229, 200, 162,0.60);*/
+/*    -fx-border-color: rgba(229, 146, 24, 0.58);*/
+/*    -fx-border-width: 6px;*/
+
+
+
+/*}*/
+
+/*.button-color{*/
+/*    -fx-background-color: #ece6e6;*/
+/*    -fx-background-radius: 20px;*/
+/*    -fx-border-radius: 20px;*/
+/*}*/
+
+/*.button-color:hover{*/
+/*    -fx-background-color: #efc68d;*/
+/*    -fx-background-radius: 20px;*/
+/*    -fx-border-radius: 20px;*/
+/*}*/
+
+/*.button-color2{*/
+/*    -fx-background-color: #e7caa2;*/
+/*    -fx-background-radius: 20px;*/
+/*    -fx-border-radius: 20px;*/
+/*    -fx-border-color: rgba(229, 146, 24, 0.58);*/
+/*    -fx-border-width: 2px;*/
+/*}*/
+
+/*.button-color2:hover{*/
+/*    -fx-background-color: #fdf7f7;*/
+/*    -fx-background-radius: 20px;*/
+/*    -fx-border-radius: 20px;*/
+/*    -fx-border-color: rgba(229, 146, 24, 0.58);*/
+/*}*/
+/*.admin-anchor-pane{*/
+
+/*    -fx-background-image: url("../images/AdminBackground.png"); !* Reference to the image in the resources directory *!*/
+/*    -fx-background-size: cover;*/
+/*    -fx-background-repeat: no-repeat;*/
+/*    -fx-background-position: center center;*/
+/*}*/
+
+
+/*.text-field{*/
+/*    -fx-border-radius: 20;*/
+/*    -fx-background-radius: 20;*/
+/*    -fx-border-color: rgba(229, 146, 24, 0.58);*/
+/*    -fx-border-width: 2px;*/
+/*}*/
+
+
+/*.button-color-register{*/
+/*    -fx-background-color: #86c48e;*/
+/*    -fx-background-radius: 20px;*/
+/*    -fx-border-radius: 20px;*/
+/*    -fx-border-color: rgba(229, 146, 24, 0.58);*/
+/*    -fx-border-width: 2px;*/
+/*}*/

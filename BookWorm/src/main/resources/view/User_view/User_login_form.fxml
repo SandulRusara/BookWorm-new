@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root1" prefHeight="870.0" prefWidth="1239.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserLoginFormController">
+    <children>
+      <ImageView fitHeight="870.0" fitWidth="1239.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/istockphoto.jpg" />
+         </image>
+      </ImageView>
+        <AnchorPane layoutX="64.0" layoutY="82.0" prefHeight="722.0" prefWidth="603.0" style="-fx-background-radius: 40; -fx-border-radius: 40;">
+            <children>
+                <Label layoutX="198.0" layoutY="68.0" prefHeight="42.0" prefWidth="207.0" text="Login">
+                    <font>
+                        <Font name="System Bold" size="73.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtUserName" layoutX="85.0" layoutY="271.0" prefHeight="56.0" prefWidth="411.0" promptText="UserName" style="-fx-background-radius: 20;" styleClass="text-field">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="89.0" layoutY="235.0" prefHeight="33.0" prefWidth="155.0" text="UserName" textFill="#908b8b">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Label>
+                <Label layoutX="89.0" layoutY="368.0" prefHeight="33.0" prefWidth="155.0" text="Password" textFill="#908b8b">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="showTextPw" layoutX="86.0" layoutY="407.0" prefHeight="56.0" prefWidth="411.0" style="-fx-background-radius: 20;" styleClass="text-field" />
+                <PasswordField fx:id="hiddenTxtPassword" layoutX="85.0" layoutY="407.0" prefHeight="56.0" prefWidth="411.0" promptText="Password" style="-fx-background-radius: 20;" styleClass="text-field">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </PasswordField>
+                <CheckBox fx:id="checkBoxPw" layoutX="100.0" layoutY="475.0" mnemonicParsing="false" onAction="#checkBoxPwOnAction" text="Show Password" textFill="#8d7d45">
+               <font>
+                  <Font size="14.0" />
+               </font></CheckBox>
+                <JFXButton fx:id="btnLogIn" buttonType="RAISED" layoutX="167.0" layoutY="527.0" onAction="#btnLogInOnAction" prefHeight="63.0" prefWidth="241.0" style="-fx-background-color: #64CCC5; -fx-background-radius: 20;" text="Log In" textFill="WHITE">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </JFXButton>
+            <Label layoutX="89.0" layoutY="618.0" prefHeight="33.0" prefWidth="178.0" text="Don't you have account" textFill="#1528a1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnRegister" layoutX="261.0" layoutY="619.0" onAction="#btnRegisterOnAction" prefHeight="33.0" prefWidth="133.0" styleClass="button-color-register" text="Register">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Line endX="88.0" layoutX="160.0" layoutY="644.0" startX="-78.0" stroke="#7b8dcd" />
+            </children>
+        </AnchorPane>
+      <ImageView fitHeight="371.0" fitWidth="371.0" layoutX="710.0" layoutY="266.0" opacity="0.45">
+         <image>
+            <Image url="@../../images/admon%20login.jpeg" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

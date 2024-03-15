@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane2" prefHeight="792.0" prefWidth="1239.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminProfileFormController">
+   <children>
+      <ImageView fitHeight="792.0" fitWidth="1239.0" opacity="0.16" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/subpane.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="207.0" layoutY="160.0" prefHeight="532.0" prefWidth="826.0" style="-fx-background-color: #908b8b; -fx-background-radius: 30;">
+         <children>
+            <Label layoutX="50.0" layoutY="120.0" prefHeight="33.0" prefWidth="189.0" text="Name  :" textFill="#282725">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="201.0" prefHeight="33.0" prefWidth="189.0" text="UserName:" textFill="#282725">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="277.0" prefHeight="33.0" prefWidth="189.0" text="Password:" textFill="#282725">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="352.0" prefHeight="33.0" prefWidth="189.0" text="E -mail:" textFill="#282725">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtName" editable="false" layoutX="226.0" layoutY="120.0" prefHeight="33.0" prefWidth="418.0" />
+            <TextField fx:id="txtUserName" editable="false" layoutX="226.0" layoutY="199.0" prefHeight="33.0" prefWidth="418.0" />
+            <TextField fx:id="txtPw" editable="false" layoutX="227.0" layoutY="278.0" prefHeight="33.0" prefWidth="418.0" />
+            <TextField fx:id="txtEmail" editable="false" layoutX="228.0" layoutY="352.0" prefHeight="33.0" prefWidth="418.0" />
+            <JFXButton fx:id="btnDelete" layoutX="101.0" layoutY="440.0" onAction="#btnDeleteOnAction" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #FF8080; -fx-background-radius: 10;" text="Delete Account" textFill="WHITE" />
+            <JFXButton fx:id="btnUpdate" layoutX="286.0" layoutY="440.0" onAction="#btnUpdateOnAction" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #D0BFFF; -fx-background-radius: 10;" text="Update Account" textFill="WHITE" />
+            <JFXButton fx:id="btnAddAdmin" layoutX="462.0" layoutY="440.0" onAction="#btnAddAdminOnAction" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #64CCC5; -fx-background-radius: 10;" text="Add new Admin" textFill="WHITE" />
+            <JFXButton fx:id="btnLogOut" layoutX="620.0" layoutY="440.0" onAction="#btnLogOutOnAction" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #352F44; -fx-background-radius: 10;" text="Log out" textFill="WHITE" />
+            <JFXButton fx:id="btnSaveChanges" buttonType="RAISED" layoutX="241.0" layoutY="452.0" onAction="#btnSaveChangesOnAction" prefHeight="28.0" prefWidth="328.0" styleClass="button-color-register" text="Save Changes" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="165.0" fitWidth="162.0" layoutX="328.0" layoutY="-62.0">
+               <image>
+                  <Image url="@../../images/icons8-user-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

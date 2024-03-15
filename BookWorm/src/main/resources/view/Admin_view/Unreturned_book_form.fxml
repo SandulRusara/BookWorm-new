@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="792.0" prefWidth="1239.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UnreturnedBookFormController">
+   <children>
+      <ImageView fitHeight="870.0" fitWidth="1239.0" opacity="0.28" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/bg2.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="423.0" layoutY="24.0" prefHeight="60.0" prefWidth="393.0" text="Unreturned Books" textFill="#06004f">
+         <font>
+            <Font name="Abyssinica SIL" size="44.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblOverdueBooks" layoutX="423.0" layoutY="131.0" prefHeight="696.0" prefWidth="759.0">
+        <columns>
+          <TableColumn fx:id="colEmail" prefWidth="186.0" text="Borrower Email" />
+          <TableColumn fx:id="colBook" prefWidth="222.0" text="Book name" />
+            <TableColumn fx:id="colDate" prefWidth="196.0" text="Due date" />
+            <TableColumn fx:id="colOverdueDays" prefWidth="154.0" text="Days overdue" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cmbBranch" layoutX="130.0" layoutY="151.0" onAction="#cmbBranchOnActions" prefHeight="36.0" prefWidth="279.0" promptText="Select a branch" style="-fx-background-color: white;" />
+      <Label layoutX="20.0" layoutY="155.0" prefHeight="28.0" prefWidth="110.0" text="Branch :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

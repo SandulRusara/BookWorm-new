@@ -1,0 +1,61 @@
+/*.anchor-pane-with-background {*/
+/*    -fx-background-image: url("../images/dashboardBackground.jpg"); !* Reference to the image in the resources directory *!*/
+/*    -fx-background-size: cover;*/
+/*    -fx-background-repeat: no-repeat;*/
+/*    -fx-background-position: center center;*/
+/*}*/
+
+/*.anchor-pane-with-background-color{*/
+/*    -fx-background-color: #fad9aa;*/
+/*}*/
+/*.anchor-pane-with-background-color:hover{*/
+/*    -fx-background-color: rgba(218, 197, 144, 0.9);*/
+/*}*/
+/*.button-color{*/
+/*    -fx-background-color: #fdf7f7;*/
+/*    -fx-border-color: rgba(255, 216, 118, 0.9);*/
+/*    -fx-border-width: 1px;*/
+/*    -fx-border-radius: 30px;*/
+/*    -fx-background-radius: 30px;*/
+
+/*}*/
+/*.button-color:hover{*/
+/*    -fx-background-color: #fad9aa;*/
+/*    -fx-border-width: 2px;*/
+/*    -fx-border-radius: 30px;*/
+/*    -fx-background-radius: 30px;*/
+/*    -fx-border-color: rgb(253, 247, 247);*/
+/*}*/
+
+/*.table-view {*/
+/*    -fx-background-color: rgba(255, 255, 255, 0.5); !* White with 50% transparency *!*/
+/*}*/
+
+/*!* Set the background of the table cells to transparent *!*/
+/*.table-row-cell {*/
+/*    -fx-background-color: transparent;*/
+/*    -fx-border-color: #d3c8aa;*/
+/*    -fx-border-width: 1px;*/
+/*    -fx-font-size: 16px;*/
+/*}*/
+/*.table-view .column-header {*/
+/*    -fx-background-color: #eacd83;*/
+/*    -fx-font-size: 14px;*/
+/*}*/
+
+/*.text-field{*/
+/*    -fx-border-radius: 20;*/
+/*    -fx-background-radius: 20;*/
+/*    -fx-border-color: rgba(229, 146, 24, 0.58);*/
+/*    -fx-border-width: 2px;*/
+/*}*/
+
+/*.button-color2:hover{*/
+/*    -fx-background-color: rgba(255, 196, 118, 0.9);*/
+/*}*/
+/*.scroll-pane {*/
+/*    -fx-background-color: transparent;*/
+/*    -fx-background: transparent;*/
+/*    -fx-border-width: 0;*/
+/*    -fx-padding: 0;*/
+/*}*/

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="870.0" prefWidth="1239.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserRegisterFormController">
+   <children>
+      <ImageView fitHeight="870.0" fitWidth="1239.0" opacity="0.29" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/bg2.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="301.0" layoutY="75.0" prefHeight="718.0" prefWidth="675.0">
+         <children>
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="691.0" layoutX="23.0" layoutY="14.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="627.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="36.0" prefHeight="94.0" prefWidth="298.0" text="Register" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="65.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="141.0" prefHeight="42.0" prefWidth="311.0" text="Name :">
+               <font>
+                  <Font name="Chilanka Regular" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtName" layoutX="82.0" layoutY="189.0" prefHeight="51.0" prefWidth="475.0" promptText="Enter Your name" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="86.0" layoutY="272.0" prefHeight="42.0" prefWidth="311.0" text="E Mail :">
+               <font>
+                  <Font name="Chilanka Regular" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEmail" layoutX="82.0" layoutY="319.0" prefHeight="51.0" prefWidth="475.0" promptText="Enter Your Email as UserName" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="86.0" layoutY="394.0" prefHeight="42.0" prefWidth="311.0" text="Password">
+               <font>
+                  <Font name="Chilanka Regular" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPwd" layoutX="82.0" layoutY="437.0" prefHeight="51.0" prefWidth="475.0" promptText="Create a strong password" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="110.0" layoutY="479.0" prefHeight="42.0" prefWidth="378.0" text="There must be at least 8 characters" textFill="#b55151">
+               <font>
+                  <Font name="Chilanka Regular" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnCreateAccount" buttonType="RAISED" layoutX="178.0" layoutY="637.0" onAction="#btnCreateAccountOnAction" prefHeight="51.0" prefWidth="298.0" style="-fx-background-color: #52D3D8; -fx-background-radius: 20;" styleClass="button-color2" text="Create Account" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="86.0" layoutY="522.0" prefHeight="42.0" prefWidth="311.0" text="Library Branch">
+               <font>
+                  <Font name="Chilanka Regular" size="22.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbBranch" layoutX="84.0" layoutY="570.0" prefHeight="42.0" prefWidth="468.0" promptText="Select a branch" style="-fx-background-radius: 10; -fx-background-color: white;" styleClass="text-field" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

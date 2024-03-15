@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="792.0" prefWidth="1245.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserProfileFormController">
+   <children>
+      <ImageView fitHeight="792.0" fitWidth="1245.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/userBorrowBook.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="481.0" layoutX="819.0" layoutY="185.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="290.0" />
+      <AnchorPane layoutX="253.0" layoutY="165.0" prefHeight="591.0" prefWidth="522.0">
+         <children>
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="544.0" layoutX="34.0" layoutY="15.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="474.0" />
+            <TextField fx:id="txtName" layoutX="81.0" layoutY="102.0" prefHeight="41.0" prefWidth="357.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="txtEmail" layoutX="83.0" layoutY="209.0" prefHeight="41.0" prefWidth="357.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="txtPw" layoutX="83.0" layoutY="319.0" prefHeight="41.0" prefWidth="357.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="txtTele" layoutX="83.0" layoutY="430.0" prefHeight="41.0" prefWidth="357.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <Label layoutX="93.0" layoutY="62.0" prefHeight="41.0" prefWidth="209.0" text="Name :">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="168.0" prefHeight="41.0" prefWidth="209.0" text="E-Mail :">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="275.0" prefHeight="41.0" prefWidth="209.0" text="Password :">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="389.0" prefHeight="41.0" prefWidth="209.0" text="UserId:">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="20.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnSaveChanges" buttonType="RAISED" layoutX="118.0" layoutY="512.0" onAction="#btnSaveChangesOnAction" prefHeight="41.0" prefWidth="257.0" styleClass="button-color-register" text="Save Changes" visible="false">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="493.0" layoutY="6.0" prefHeight="63.0" prefWidth="264.0" text="My Profile" textFill="#070054">
+         <font>
+            <Font name="Abyssinica SIL" size="44.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnUpadte" layoutX="869.0" layoutY="261.0" onAction="#btnUpdateOnAction" prefHeight="41.0" prefWidth="193.0" style="-fx-background-color: #86A7FC; -fx-background-radius: 10;" styleClass="button-color2" text="Update Account" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Serif Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="869.0" layoutY="358.0" onAction="#btnDeleteOnAction" prefHeight="41.0" prefWidth="193.0" style="-fx-background-color: #FF9B9B; -fx-background-radius: 10;" styleClass="button-color2" text="Delete Account" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Serif Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnLogOUt" layoutX="875.0" layoutY="599.0" onAction="#btnLogOutOnAction" prefHeight="41.0" prefWidth="193.0" style="-fx-background-color: #9B4444; -fx-background-radius: 10;" styleClass="button-color2" text="LogOut" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Serif Bold" size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

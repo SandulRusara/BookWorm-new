@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="792.0" prefWidth="1245.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BorrowBookFormController">
+   <children>
+      <ImageView fitHeight="792.0" fitWidth="1245.0" opacity="0.32" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/userBorrowBook.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="627.0" layoutX="635.0" layoutY="107.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="595.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="436.0" layoutY="6.0" prefHeight="60.0" prefWidth="331.0" text="Start Borrowing">
+         <font>
+            <Font name="Abyssinica SIL" size="44.0" />
+         </font>
+      </Label>
+      <Separator layoutX="609.0" layoutY="118.0" orientation="VERTICAL" prefHeight="649.0" prefWidth="16.0">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.7763158082962036" green="0.6792762875556946" blue="0.6792762875556946" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Separator>
+      <TableView fx:id="tblBook" layoutX="649.0" layoutY="217.0" prefHeight="508.0" prefWidth="564.0">
+        <columns>
+          <TableColumn fx:id="colBookTitle" prefWidth="164.0" text="Book Title" />
+          <TableColumn fx:id="colAuthor" prefWidth="174.0" text="Author" />
+            <TableColumn fx:id="colGener" prefWidth="140.0" text="Genre" />
+            <TableColumn fx:id="colBtnGet" prefWidth="85.0" text="Get" />
+        </columns>
+         <styleClass>
+            <String fx:value="table-view" />
+            <String fx:value="table-row-cell" />
+         </styleClass>
+      </TableView>
+      <TextField fx:id="txtSEarch" layoutX="723.0" layoutY="138.0" onAction="#txtSearch" prefHeight="46.0" prefWidth="453.0" promptText="         Search book by name" style="-fx-background-radius: 10;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="img1" fitHeight="33.0" fitWidth="36.0" layoutX="734.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true" visible="false">
+        <!-- <image>
+            <Image url="@../../images/icons8-search-80.png" />
+         </image>-->
+      </ImageView>
+      <AnchorPane layoutX="56.0" layoutY="143.0" prefHeight="590.0" prefWidth="526.0">
+         <children>
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="595.0" layoutX="1.0" layoutY="-4.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="526.0" />
+            <Accordion layoutX="175.0" layoutY="60.0" />
+            <TextField fx:id="txtBookTitle" editable="false" layoutX="39.0" layoutY="60.0" prefHeight="39.0" prefWidth="414.0" style="-fx-background-radius: 10;" />
+            <TextField fx:id="txtAuthor" editable="false" layoutX="37.0" layoutY="144.0" prefHeight="39.0" prefWidth="414.0" style="-fx-background-radius: 10;" />
+            <TextField fx:id="txtGener" editable="false" layoutX="39.0" layoutY="225.0" prefHeight="39.0" prefWidth="405.0" style="-fx-background-radius: 10;" />
+            <Label layoutX="40.0" layoutY="31.0" prefHeight="33.0" prefWidth="202.0" text="Book Title :">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="111.0" prefHeight="33.0" prefWidth="202.0" text="Author :">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="192.0" prefHeight="33.0" prefWidth="202.0" text="Genre:">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="17.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="combPeriod" layoutX="221.0" layoutY="300.0" onAction="#combPeriodOnAction" prefHeight="39.0" prefWidth="226.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Label layoutX="61.0" layoutY="306.0" prefHeight="33.0" prefWidth="158.0" text="Borrow Period:">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="375.0" prefHeight="33.0" prefWidth="158.0" text="Due Date :">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDueDate" layoutX="184.0" layoutY="376.0" prefHeight="33.0" prefWidth="158.0" text="2024-03-03">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="17.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnBorrow" buttonType="RAISED" layoutX="175.0" layoutY="457.0" onAction="#btnBorrowOnAction" prefHeight="46.0" prefWidth="158.0" style="-fx-background-color: #102C57; -fx-background-radius: 10;" styleClass="button-color2" text="Borrow" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

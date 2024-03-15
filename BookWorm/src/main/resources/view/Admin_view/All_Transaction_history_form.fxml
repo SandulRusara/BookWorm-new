@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="792.0" prefWidth="1239.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AllTransactionHistoryFormController">
+   <children>
+      <ImageView fitHeight="792.0" fitWidth="1239.0" opacity="0.51">
+         <image>
+            <Image url="@../../images/adminlogin.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="736.0" layoutY="56.0" prefHeight="65.0" prefWidth="403.0" text=" History" textFill="#002365">
+         <font>
+            <Font name="Abyssinica SIL" size="44.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combType" layoutX="212.0" layoutY="135.0" onAction="#combTypeOnAction" prefHeight="43.0" prefWidth="356.0" promptText="Select Type" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <Label layoutX="62.0" layoutY="135.0" prefHeight="43.0" prefWidth="213.0" text="Transaction Type :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblTransaction" layoutX="92.0" layoutY="264.0" prefHeight="414.0" prefWidth="1071.0">
+        <columns>
+          <TableColumn fx:id="colTransactionId" prefWidth="143.0" text="Transaction Id" />
+          <TableColumn fx:id="ColBookId" prefWidth="132.0" text="Book Id" />
+            <TableColumn fx:id="ColBookName" prefWidth="197.0" text="Book name" />
+            <TableColumn fx:id="colUserId" prefWidth="140.0" text="User Id" />
+            <TableColumn fx:id="colBranchId" prefWidth="150.0" text="Branch Id" />
+            <TableColumn fx:id="colType" prefWidth="163.0" text="Transaction Type" />
+            <TableColumn fx:id="colDate" prefWidth="144.0" text="Date" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="212.0" layoutY="199.0" onAction="#txtSearchOnAction" prefHeight="43.0" prefWidth="356.0" promptText="                Search by User Id" style="-fx-background-radius: 20;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="43.0" fitWidth="37.0" layoutX="797.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" visible="false">
+        <!-- <image>
+            <Image url="@../../images/icons8-search-80.png" />
+         </image>-->
+      </ImageView>
+      <JFXButton fx:id="btnOverdue" buttonType="RAISED" layoutX="1009.0" layoutY="727.0" onAction="#btnOverdueAction" prefHeight="51.0" prefWidth="203.0" style="-fx-background-color: #908b8b; -fx-background-radius: 15;" text="Overdue Books" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

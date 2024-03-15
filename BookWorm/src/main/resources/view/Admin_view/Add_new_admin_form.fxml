@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane2" prefHeight="792.0" prefWidth="1239.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AddNewAdminFormController">
+    <children>
+      <ImageView fitHeight="792.0" fitWidth="1239.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/subpane.jpg" />
+         </image>
+      </ImageView>
+        <AnchorPane layoutX="207.0" layoutY="160.0" prefHeight="532.0" prefWidth="826.0" style="-fx-background-color: #EEF5FF; -fx-background-radius: 40;">
+            <children>
+                <Label layoutX="50.0" layoutY="120.0" prefHeight="33.0" prefWidth="189.0" text="Name  :" textFill="#282725">
+                    <font>
+                        <Font name="DejaVu Sans Mono Bold" size="21.0" />
+                    </font>
+                </Label>
+                <Label layoutX="50.0" layoutY="201.0" prefHeight="33.0" prefWidth="189.0" text="UserName:" textFill="#282725">
+                    <font>
+                        <Font name="DejaVu Sans Mono Bold" size="21.0" />
+                    </font>
+                </Label>
+                <Label layoutX="50.0" layoutY="277.0" prefHeight="33.0" prefWidth="189.0" text="Password:" textFill="#282725">
+                    <font>
+                        <Font name="DejaVu Sans Mono Bold" size="21.0" />
+                    </font>
+                </Label>
+                <Label layoutX="50.0" layoutY="352.0" prefHeight="33.0" prefWidth="189.0" text="E -mail:" textFill="#282725">
+                    <font>
+                        <Font name="DejaVu Sans Mono Bold" size="21.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtName" layoutX="223.0" layoutY="120.0" prefHeight="33.0" prefWidth="444.0" style="-fx-background-radius: 10;" />
+                <TextField fx:id="txtUserName" layoutX="223.0" layoutY="199.0" prefHeight="33.0" prefWidth="444.0" style="-fx-background-radius: 10;" />
+                <TextField fx:id="txtPw" layoutX="224.0" layoutY="278.0" prefHeight="33.0" prefWidth="444.0" style="-fx-background-radius: 10;" />
+                <TextField fx:id="txtEmail" layoutX="225.0" layoutY="352.0" prefHeight="33.0" prefWidth="444.0" style="-fx-background-radius: 10;" />
+                <JFXButton fx:id="btnAddAdmin" alignment="CENTER" buttonType="RAISED" layoutX="281.0" layoutY="445.0" onAction="#btnAddAdminOnAction" prefHeight="59.0" prefWidth="261.0" style="-fx-background-color: #52D3D8; -fx-background-radius: 20;" text="Create Account" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></JFXButton>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
